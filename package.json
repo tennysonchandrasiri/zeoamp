@@ -1,0 +1,31 @@
+{
+  "name": "zeo-ampara",
+  "version": "1.0.0",
+  "description": "An editorial learning resource library for ZEO Ampara.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "oxlint src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@solidjs/diagnostics": "^2.0.0-rc.14",
+    "@solidjs/vite-plugin": "^3.0.0-next.48",
+    "@tailwindcss/vite": "^4.1.13",
+    "eslint-plugin-solid": "~0.18.1",
+    "oxlint": "~1.79.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^8.1.5"
+  },
+  "dependencies": {
+    "@fontsource/abhaya-libre": "^5.3.0",
+    "@fontsource/crimson-pro": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@solidjs/meta": "^1.0.0-next.2",
+    "@solidjs/web": "^2.0.0-rc.14",
+    "solid-js": "^2.0.0-rc.14"
+  }
+}

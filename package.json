@@ -13,10 +13,8 @@
   "devDependencies": {
     "@solidjs/diagnostics": "^2.0.0-rc.14",
     "@solidjs/vite-plugin": "^3.0.0-next.48",
-    "@tailwindcss/vite": "^4.1.13",
     "eslint-plugin-solid": "~0.18.1",
     "oxlint": "~1.79.0",
-    "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^8.1.5"
   },

@@ -2,31 +2,6 @@
 @import '@fontsource/abhaya-libre/latin-500.css';
 @import '@fontsource/abhaya-libre/sinhala-400.css';
 @import '@fontsource/abhaya-libre/sinhala-500.css';
-@import 'tailwindcss';
-
-@theme {
-  --color-ink-black: #1a1a1a;
-  --color-paper-white: #ffffff;
-  --color-graphite: #6a6a6a;
-  --color-warm-charcoal: #4d3f32;
-  --color-fog: #f6f6f6;
-  --color-linen: #ececec;
-  --color-hairline: #e3e3e3;
-  --color-pebble: #8d8d8d;
-  --color-sage: #547e69;
-  --color-mint-wash: #f1fcf6;
-
-  --font-abhaya-libre: 'Abhaya Libre', serif;
-
-  --radius-badge: 4px;
-  --radius-button: 8px;
-  --radius-card: 12px;
-  --radius-pill: 9999px;
-
-  --shadow-subtle:
-    0 1px 3px rgb(0 0 0 / 3%), 0 5px 5px rgb(0 0 0 / 3%),
-    0 10px 6px rgb(0 0 0 / 2%);
-}
 
 :root {
   color-scheme: light;
@@ -40,6 +15,24 @@
   --surface-fog: #f6f6f6;
   --surface-linen: #ececec;
   --surface-mint-wash: #f1fcf6;
+  --color-ink-black: #1a1a1a;
+  --color-paper-white: #ffffff;
+  --color-graphite: #6a6a6a;
+  --color-warm-charcoal: #4d3f32;
+  --color-fog: #f6f6f6;
+  --color-linen: #ececec;
+  --color-hairline: #e3e3e3;
+  --color-pebble: #8d8d8d;
+  --color-sage: #547e69;
+  --color-mint-wash: #f1fcf6;
+  --font-abhaya-libre: 'Abhaya Libre', serif;
+  --radius-badge: 4px;
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+  --shadow-subtle:
+    0 1px 3px rgb(0 0 0 / 3%), 0 5px 5px rgb(0 0 0 / 3%),
+    0 10px 6px rgb(0 0 0 / 2%);
   --page-width: 1080px;
   --page-gutter: clamp(20px, 4vw, 40px);
 }

@@ -29,7 +29,7 @@ export function ResourceCard(props: ResourceCardProps) {
       <div class="resource-card__cover">
         <img
           src={coverAsset(props.resource.img)}
-          alt={`${props.resource.subject} cover`}
+          alt={`${props.resource.subject} විෂය ආවරණය`}
           loading="lazy"
           decoding="async"
           width="350"
@@ -51,21 +51,21 @@ export function ResourceCard(props: ResourceCardProps) {
         <div class="resource-card__actions">
           <ButtonLink
             href={downloadUrl(props.resource.link)}
-            variant="outline"
+            variant="solid"
             external
             class="resource-action"
           >
             <DownloadIcon />
-            <span>Download</span>
+            <span>බාගන්න</span>
           </ButtonLink>
           <ButtonLink
             href={viewUrl(props.resource.link)}
-            variant="ghost"
+            variant="outline"
             external
             class="resource-action"
           >
             <OpenIcon />
-            <span>Open in Drive</span>
+            <span>නරඹන්න</span>
           </ButtonLink>
         </div>
       </div>

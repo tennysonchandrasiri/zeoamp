@@ -15,7 +15,7 @@ export default function Document(props: ParentProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
         <link rel="icon" type="image/jpeg" href={publicAsset('favicon.jpg')} />
-        <title>ZEO Ampara — Learning resources</title>
+        <title>ZEO Ampara — ඉගෙනුම් සම්පත්</title>
         <HydrationScript />
       </head>
       <body>{props.children}</body>

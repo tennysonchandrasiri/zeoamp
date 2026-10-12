@@ -2,7 +2,7 @@ import type { ParentProps } from 'solid-js';
 
 type ButtonProps = ParentProps<{
   class?: string;
-  variant?: 'ghost' | 'outline';
+  variant?: 'ghost' | 'outline' | 'solid';
   selected?: boolean;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;

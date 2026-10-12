@@ -3,7 +3,7 @@ import type { ParentProps } from 'solid-js';
 type ButtonLinkProps = ParentProps<{
   href: string;
   class?: string;
-  variant?: 'ghost' | 'outline';
+  variant?: 'ghost' | 'outline' | 'solid';
   external?: boolean;
 }>;
 

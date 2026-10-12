@@ -163,6 +163,13 @@ export default function App() {
               </p>
               <div class="office-note__actions">
                 <ButtonLink
+                  href="https://tennysonchandrasiri.github.io/twootle/"
+                  variant="solid"
+                  external
+                >
+                  අපෙන් තවත්
+                </ButtonLink>
+                <ButtonLink
                   href="https://web.facebook.com/ZEOAmpara/?_rdc=1&_rdr#"
                   variant="outline"
                   external

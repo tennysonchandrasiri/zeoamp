@@ -1,33 +1,33 @@
+import { Button as SdkButton } from '@ui-sdk/solid/button';
 import type { ParentProps } from 'solid-js';
+
+export type ButtonVariant = 'ghost' | 'outline' | 'solid';
+
+export function buttonClass(variant: ButtonVariant = 'ghost', extra?: string) {
+  return `button button--${variant} ${extra ?? ''}`.trim();
+}
 
 type ButtonProps = ParentProps<{
   class?: string;
-  variant?: 'ghost' | 'outline' | 'solid';
-  selected?: boolean;
+  variant?: ButtonVariant;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-  onClick?: () => void;
-  'aria-pressed'?: boolean;
+  pendingAnnouncement?: string;
+  onClick?: (event: MouseEvent) => void;
   'aria-label'?: string;
 }>;
 
 export function Button(props: ButtonProps) {
   return (
-    <button
+    <SdkButton
       type={props.type ?? 'button'}
-      class={`button button--${props.variant ?? 'ghost'} ${props.class ?? ''} ${props.selected ? 'is-selected' : ''}`.trim()}
+      class={buttonClass(props.variant, props.class)}
       disabled={props.disabled}
-      onClick={() => props.onClick?.()}
-      aria-pressed={
-        props['aria-pressed'] === undefined && props.selected === undefined
-          ? undefined
-          : (props['aria-pressed'] ?? props.selected)
-            ? 'true'
-            : 'false'
-      }
+      pendingAnnouncement={props.pendingAnnouncement}
+      onClick={(event) => props.onClick?.(event)}
       aria-label={props['aria-label']}
     >
       {props.children}
-    </button>
+    </SdkButton>
   );
 }

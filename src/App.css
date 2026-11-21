@@ -1,11 +1,47 @@
-@import '@fontsource/abhaya-libre/latin-400.css';
-@import '@fontsource/abhaya-libre/latin-500.css';
-@import '@fontsource/abhaya-libre/sinhala-400.css';
-@import '@fontsource/abhaya-libre/sinhala-500.css';
+@layer ui-sdk;
+
+/* SINHA Sathara Unicode for Sinhala text. */
+@font-face {
+  font-family: 'SINHA Sathara Unicode';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/SINHA-Sathara-Unicode.woff2') format('woff2');
+  unicode-range:
+    U+0020, U+0D82, U+0D83, U+0D85, U+0D86, U+0D87, U+0D88, U+0D89, U+0D8A,
+    U+0D8B, U+0D8C, U+0D8D, U+0D8E, U+0D8F, U+0D90, U+0D91, U+0D92, U+0D93,
+    U+0D94, U+0D95, U+0D96, U+0D9A, U+0D9B, U+0D9C, U+0D9D, U+0D9E, U+0D9F,
+    U+0DA0, U+0DA1, U+0DA2, U+0DA3, U+0DA4, U+0DA5, U+0DA6, U+0DA7, U+0DA8,
+    U+0DA9, U+0DAA, U+0DAB, U+0DAC, U+0DAD, U+0DAE, U+0DAF, U+0DB0, U+0DB1,
+    U+0DB3, U+0DB4, U+0DB5, U+0DB6, U+0DB7, U+0DB8, U+0DB9, U+0DBA, U+0DBB,
+    U+0DBD, U+0DC0, U+0DC1, U+0DC2, U+0DC3, U+0DC4, U+0DC5, U+0DC6, U+0DCA,
+    U+0DCF, U+0DD0, U+0DD1, U+0DD2, U+0DD3, U+0DD4, U+0DD6, U+0DD8, U+0DD9,
+    U+0DDA, U+0DDB, U+0DDC, U+0DDD, U+0DDE, U+0DDF, U+0DF2, U+200C, U+200D,
+    U+25CC;
+}
+
+@font-face {
+  font-family: 'SINHA Sathara Unicode';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/SINHA-Sathara-Unicode.woff2') format('woff2');
+  unicode-range:
+    U+0020, U+0D82, U+0D83, U+0D85, U+0D86, U+0D87, U+0D88, U+0D89, U+0D8A,
+    U+0D8B, U+0D8C, U+0D8D, U+0D8E, U+0D8F, U+0D90, U+0D91, U+0D92, U+0D93,
+    U+0D94, U+0D95, U+0D96, U+0D9A, U+0D9B, U+0D9C, U+0D9D, U+0D9E, U+0D9F,
+    U+0DA0, U+0DA1, U+0DA2, U+0DA3, U+0DA4, U+0DA5, U+0DA6, U+0DA7, U+0DA8,
+    U+0DA9, U+0DAA, U+0DAB, U+0DAC, U+0DAD, U+0DAE, U+0DAF, U+0DB0, U+0DB1,
+    U+0DB3, U+0DB4, U+0DB5, U+0DB6, U+0DB7, U+0DB8, U+0DB9, U+0DBA, U+0DBB,
+    U+0DBD, U+0DC0, U+0DC1, U+0DC2, U+0DC3, U+0DC4, U+0DC5, U+0DC6, U+0DCA,
+    U+0DCF, U+0DD0, U+0DD1, U+0DD2, U+0DD3, U+0DD4, U+0DD6, U+0DD8, U+0DD9,
+    U+0DDA, U+0DDB, U+0DDC, U+0DDD, U+0DDE, U+0DDF, U+0DF2, U+200C, U+200D,
+    U+25CC;
+}
 
 :root {
   color-scheme: light;
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +61,8 @@
   --color-pebble: #8d8d8d;
   --color-sage: #547e69;
   --color-mint-wash: #f1fcf6;
-  --font-abhaya-libre: 'Abhaya Libre', serif;
+  --font-editorial:
+    'SINHA Sathara Unicode', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --radius-badge: 4px;
   --radius-button: 8px;
   --radius-card: 12px;
@@ -52,7 +89,7 @@ body {
   margin: 0;
   background: var(--surface-white);
   color: var(--color-ink-black);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -159,14 +196,14 @@ input {
 }
 
 .brand__text strong {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.01em;
 }
 
 .brand__text > span {
   color: var(--color-graphite);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.015em;
 }
 
@@ -179,7 +216,7 @@ input {
 .site-nav a {
   padding-block: 10px;
   color: var(--color-ink-black);
-  font-size: 14px;
+  font-size: 15px;
   text-decoration: none;
   transition: color 140ms ease;
 }
@@ -209,8 +246,8 @@ input {
 }
 
 .hero__eyebrow {
-  font-size: 16px;
-  line-height: 1.35;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .hero h1,
@@ -219,7 +256,7 @@ input {
 .empty-state h3 {
   margin: 0;
   color: var(--color-ink-black);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-weight: 400;
   letter-spacing: normal;
   text-wrap: balance;
@@ -242,7 +279,7 @@ input {
   max-width: 620px;
   margin: 0;
   color: var(--color-graphite);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 21px;
   line-height: 1.55;
   text-wrap: pretty;
@@ -268,7 +305,7 @@ input {
   background: transparent;
   color: var(--color-ink-black);
   cursor: pointer;
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.25;
@@ -336,7 +373,7 @@ input {
 }
 
 .hero__facts strong {
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 23px;
   font-weight: 400;
   line-height: 1;
@@ -376,7 +413,7 @@ input {
 .library__intro {
   margin: 10px 0 0;
   color: var(--color-graphite);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 18px;
   line-height: 1.4;
 }
@@ -421,14 +458,20 @@ input {
 }
 
 .grade-option {
+  display: inline-flex;
   min-width: 78px;
   min-height: 54px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0;
   border: 1px solid transparent;
   border-radius: var(--radius-button);
   padding: 5px 10px;
+  background: transparent;
   color: var(--color-graphite);
+  cursor: pointer;
+  font: inherit;
 }
 
 .grade-option:hover {
@@ -436,30 +479,34 @@ input {
   color: var(--color-ink-black);
 }
 
-.grade-option.is-selected {
+.grade-option[data-checked] {
   border-color: var(--color-hairline);
   background: var(--surface-white);
   color: var(--color-ink-black);
 }
 
 .grade-option__number {
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 20px;
   font-weight: 400;
   line-height: 1;
 }
 
 .grade-option__label {
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 13px;
   line-height: 1.35;
 }
 
+.search-field {
+  width: min(100%, 330px);
+  flex: 0 1 330px;
+}
+
 .search-box {
   display: flex;
-  width: min(100%, 330px);
+  width: 100%;
   min-height: 46px;
-  flex: 0 1 330px;
   align-items: center;
   gap: 10px;
   border: 1px solid var(--color-hairline);
@@ -509,7 +556,7 @@ input {
   border: 1px solid var(--color-hairline);
   border-radius: var(--radius-badge);
   color: var(--color-pebble);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 13px;
 }
 
@@ -592,7 +639,7 @@ input {
   padding: 3px 8px;
   background: var(--surface-fog);
   color: var(--color-graphite);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 13px;
   line-height: 1.25;
 }
@@ -604,14 +651,14 @@ input {
 }
 
 .grade-label[lang='si'] {
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 12px;
 }
 
 .resource-card h3 {
   margin: 12px 0 4px;
   color: var(--color-ink-black);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.15;
@@ -621,7 +668,7 @@ input {
 .resource-card p {
   margin: 0;
   color: var(--color-graphite);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 16px;
   line-height: 1.42;
   text-wrap: pretty;
@@ -700,7 +747,7 @@ input {
   max-width: 64ch;
   margin: 16px auto 0;
   color: var(--color-graphite);
-  font-family: var(--font-abhaya-libre);
+  font-family: var(--font-editorial);
   font-size: 18px;
   line-height: 1.55;
   text-align: center;
@@ -753,7 +800,7 @@ input {
     gap: 18px;
   }
 
-  .search-box {
+  .search-field {
     width: 100%;
     max-width: none;
     flex-basis: auto;

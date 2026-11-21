@@ -1,10 +1,12 @@
 import { Meta, Title } from '@solidjs/meta';
+import { Separator } from '@ui-sdk/solid/separator';
 import { For, Show, createMemo, createSignal } from 'solid-js';
 import { Button } from './components/Button';
 import { ButtonLink } from './components/ButtonLink';
-import { GradeOption } from './components/GradeOption';
+import { GradePicker } from './components/GradePicker';
 import { ResourceCard } from './components/ResourceCard';
-import { content, grades, publicAsset, totalResources, type Grade } from './data/assets';
+import { SearchField } from './components/SearchField';
+import { content, publicAsset, totalResources, type Grade } from './data/assets';
 import './App.css';
 
 export default function App() {
@@ -39,7 +41,7 @@ export default function App() {
             <img src={publicAsset('favicon.jpg')} width="44" height="44" alt="" />
             <span class="brand__text">
               <strong lang="en">ZEO Ampara</strong>
-              <span>කලාප අධ්‍යාපන කාර්යාලය</span>
+              <span lang="si">කලාප අධ්‍යාපන කාර්යාලය</span>
             </span>
           </a>
           <nav class="site-nav" aria-label="ප්‍රධාන මෙනුව">
@@ -73,7 +75,7 @@ export default function App() {
               <strong>06—11</strong>
               <span>ශ්‍රේණි</span>
             </div>
-            <span class="hero__fact-divider" aria-hidden="true" />
+            <Separator decorative orientation="vertical" class="hero__fact-divider" />
             <div>
               <strong>{totalResources}</strong>
               <span>විෂය සංග්‍රහ</span>
@@ -95,33 +97,8 @@ export default function App() {
           </div>
 
           <div class="library-controls">
-            <div class="grade-picker" role="group" aria-label="ශ්‍රේණිය අනුව සම්පත් තෝරන්න">
-              <For each={grades}>
-                {(grade) => (
-                  <GradeOption
-                    grade={grade}
-                    selected={activeGrade() === grade}
-                    onSelect={setActiveGrade}
-                  />
-                )}
-              </For>
-            </div>
-            <label class="search-box">
-              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
-                <circle cx="8.75" cy="8.75" r="5.75" />
-                <path d="m13 13 4 4" />
-              </svg>
-              <span class="visually-hidden">විෂය හෝ සම්පත් සොයන්න</span>
-              <input
-                type="search"
-                name="resource-search"
-                autocomplete="off"
-                placeholder="විෂය හෝ සම්පත් සොයන්න"
-                value={searchTerm()}
-                onInput={(event) => setSearchTerm(event.currentTarget.value)}
-              />
-              <kbd aria-hidden="true">⌕</kbd>
-            </label>
+            <GradePicker value={activeGrade()} onChange={setActiveGrade} />
+            <SearchField value={searchTerm()} onValueChange={setSearchTerm} />
           </div>
 
           <div class="results-line">

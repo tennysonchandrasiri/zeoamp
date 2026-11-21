@@ -9,6 +9,9 @@ export default defineConfig({
   // the entries around src/App.tsx (wrapped in src/Document.tsx) and `vite build`
   // prerenders the shell into a purely static dist/client.
   plugins: [solid({ start: true, diagnostics: true })],
+  // Keep one copy of the behavior core. Pre-bundling it separately makes
+  // @ui-sdk/solid load a second instance and throw in development.
+  optimizeDeps: { exclude: ['@ui-sdk/core'] },
   server: {
     port: 3000,
   },

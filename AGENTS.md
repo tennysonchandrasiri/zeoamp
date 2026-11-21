@@ -2,6 +2,10 @@
 
 This is a SolidJS 2.x project. Solid is not React: components run once (there is no re-render), reactivity is fine-grained through signals, and effects/memos have Solid-specific semantics. Do not port React patterns.
 
+## ui-sdk
+
+Before using ui-sdk, follow the ui-sdk skill if it is installed, and read `node_modules/@ui-sdk/solid/docs/llms.txt`. To build a new component, also search `node_modules/@ui-sdk/solid/docs/core.md` by heading, and read `rendering.md` next to it.
+
 ## Versioned skills (in node_modules — read on demand)
 
 The installed packages ship agent skills that match their exact installed versions:
